@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "start_time": "10:00am",
+        "end_time": "10:30am",
+        "slot_alloted_to": {
+            "id": 1,
+            "name": "lec 1",
+            "faculty_id": 1,
+            "subject_id": 1
+        }
+    },
+    {
+        "id": 2,
+        "start_time": "10:30am",
+        "end_time": "11:00am",
+        "slot_alloted_to": {
+            "id": 4,
+            "name": "lec 4",
+            "faculty_id": 2,
+            "subject_id": 2
+        }
+    },
+    {
+        "id": 3,
+        "start_time": "11:00am",
+        "end_time": "11:30am",
+        "slot_alloted_to": {
+            "id": 3,
+            "name": "lec 3",
+            "faculty_id": 3,
+            "subject_id": 1
+        }
+    },
+    {
+        "id": 4,
+        "start_time": "11:30am",
+        "end_time": "12:00pm",
+        "slot_alloted_to": {
+            "id": 6,
+            "name": "lec 6",
+            "faculty_id": 1,
+            "subject_id": 3
+        }
+    },
+    {
+        "id": 5,
+        "start_time": "12:00pm",
+        "end_time": "12:30pm",
+        "slot_alloted_to": {
+            "id": 2,
+            "name": "lec 2",
+            "faculty_id": 2,
+            "subject_id": 1
+        }
+    },
+    {
+        "id": 6,
+        "start_time": "12:30pm",
+        "end_time": "01:00pm",
+        "slot_alloted_to": {
+            "id": 5,
+            "name": "lec 5",
+            "faculty_id": 3,
+            "subject_id": 2
+        }
+    }
+]

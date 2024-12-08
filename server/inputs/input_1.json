@@ -1,0 +1,253 @@
+{
+    "university": "SAKEC",
+    "imageURL": null,
+    "departments": [
+        {
+            "departmentName": "IT",
+            "standards": [
+                {
+                    "standardName": "FE",
+                    "divisions": [
+                        {
+                            "divisionName": "FE5",
+                            "workingDays": [
+                                {
+                                    "dayName": "MONDAY",
+                                    "startTime": "9:00am",
+                                    "endTime": "5:00pm",
+                                    "breaks": [
+                                        {
+                                            "breakName": "Breakfast",
+                                            "startTime": "1:00pm",
+                                            "endTime": "2:00pm"
+                                        },
+                                        {
+                                            "breakName": "Tea",
+                                            "startTime": "4:00pm",
+                                            "endTime": "4:30pm"
+                                        }
+                                    ],
+                                    "slotSize": 1800
+                                },
+                                {
+                                    "dayName": "TUESDAY",
+                                    "startTime": "9:00am",
+                                    "endTime": "5:00pm",
+                                    "breaks": [
+                                        {
+                                            "breakName": "Breakfast",
+                                            "startTime": "1:00pm",
+                                            "endTime": "2:00pm"
+                                        },
+                                        {
+                                            "breakName": "Tea",
+                                            "startTime": "4:00pm",
+                                            "endTime": "4:30pm"
+                                        }
+                                    ],
+                                    "slotSize": 1800
+                                },
+                                {
+                                    "dayName": "WEDNESDAY",
+                                    "startTime": "9:00am",
+                                    "endTime": "5:00pm",
+                                    "breaks": [
+                                        {
+                                            "breakName": "Breakfast",
+                                            "startTime": "1:00pm",
+                                            "endTime": "2:00pm"
+                                        },
+                                        {
+                                            "breakName": "Tea",
+                                            "startTime": "4:00pm",
+                                            "endTime": "4:30pm"
+                                        }
+                                    ],
+                                    "slotSize": 1800
+                                },
+                                {
+                                    "dayName": "THURSDAY",
+                                    "startTime": "9:00am",
+                                    "endTime": "5:00pm",
+                                    "breaks": [
+                                        {
+                                            "breakName": "Breakfast",
+                                            "startTime": "1:00pm",
+                                            "endTime": "2:00pm"
+                                        },
+                                        {
+                                            "breakName": "Tea",
+                                            "startTime": "4:00pm",
+                                            "endTime": "4:30pm"
+                                        }
+                                    ],
+                                    "slotSize": 1800
+                                },
+                                {
+                                    "dayName": "FRIDAY",
+                                    "startTime": "9:00am",
+                                    "endTime": "5:00pm",
+                                    "breaks": [
+                                        {
+                                            "breakName": "Breakfast",
+                                            "startTime": "1:00pm",
+                                            "endTime": "2:00pm"
+                                        },
+                                        {
+                                            "breakName": "Tea",
+                                            "startTime": "4:00pm",
+                                            "endTime": "4:30pm"
+                                        }
+                                    ],
+                                    "slotSize": 1800
+                                }
+                            ]
+                        },
+
+                {
+                    "divisionName": "FE6",
+                    "workingDays": [
+                        {
+                            "dayName": "MONDAY",
+                            "startTime": "9:00am",
+                            "endTime": "5:00pm",
+                            "breaks": [
+                                {
+                                    "breakName": "Breakfast",
+                                    "startTime": "1:00pm",
+                                    "endTime": "2:00pm"
+                                },
+                                {
+                                    "breakName": "Tea",
+                                    "startTime": "4:00pm",
+                                    "endTime": "4:30pm"
+                                }
+                            ],
+                            "slotSize": 1800
+                        },
+                        {
+                            "dayName": "TUESDAY",
+                            "startTime": "9:00am",
+                            "endTime": "5:00pm",
+                            "breaks": [
+                                {
+                                    "breakName": "Breakfast",
+                                    "startTime": "1:00pm",
+                                    "endTime": "2:00pm"
+                                },
+                                {
+                                    "breakName": "Tea",
+                                    "startTime": "4:00pm",
+                                    "endTime": "4:30pm"
+                                }
+                            ],
+                            "slotSize": 1800
+                        },
+                        {
+                            "dayName": "WEDNESDAY",
+                            "startTime": "9:00am",
+                            "endTime": "5:00pm",
+                            "breaks": [
+                                {
+                                    "breakName": "Breakfast",
+                                    "startTime": "1:00pm",
+                                    "endTime": "2:00pm"
+                                },
+                                {
+                                    "breakName": "Tea",
+                                    "startTime": "4:00pm",
+                                    "endTime": "4:30pm"
+                                }
+                            ],
+                            "slotSize": 1800
+                        },
+                        {
+                            "dayName": "THURSDAY",
+                            "startTime": "9:00am",
+                            "endTime": "5:00pm",
+                            "breaks": [
+                                {
+                                    "breakName": "Breakfast",
+                                    "startTime": "1:00pm",
+                                    "endTime": "2:00pm"
+                                },
+                                {
+                                    "breakName": "Tea",
+                                    "startTime": "4:00pm",
+                                    "endTime": "4:30pm"
+                                }
+                            ],
+                            "slotSize": 1800
+                        },
+                        {
+                            "dayName": "FRIDAY",
+                            "startTime": "9:00am",
+                            "endTime": "5:00pm",
+                            "breaks": [
+                                {
+                                    "breakName": "Breakfast",
+                                    "startTime": "1:00pm",
+                                    "endTime": "2:00pm"
+                                },
+                                {
+                                    "breakName": "Tea",
+                                    "startTime": "4:00pm",
+                                    "endTime": "4:30pm"
+                                }
+                            ],
+                            "slotSize": 1800
+                        }
+                    ]
+                }
+            ]
+        }
+            ]
+        }
+    ],
+    "subjects": [
+        {
+            "subjectName": "DSA"
+        },
+        {
+            "subjectName": "Maths"
+        }
+    ],
+    "faculties": [
+        {
+            "facultyName": "Archana"
+        },
+        {
+            "facultyName": "Shwetambari"
+        }
+    ],
+    "subjectFacultyDivision":[
+        {
+            "subjectName":"DSA",
+            "facultyName":"Archana",
+            "divisionName":"FE5",
+            "compulsoryContinuousSlots":1,
+            "weeklyFrequency":"auto"
+        },
+        {
+            "subjectName":"DSA",
+            "facultyName":"Archana",
+            "divisionName":"FE6",
+            "compulsoryContinuousSlots":1,
+            "weeklyFrequency":3
+        },
+        {
+            "subjectName":"Maths",
+            "facultyName":"Shwetambari",
+            "divisionName":"FE6",
+            "compulsoryContinuousSlots":2,
+            "weeklyFrequency":2
+        },
+        {
+            "subjectName":"Maths",
+            "facultyName":"Shwetambari",
+            "divisionName":"FE5",
+            "compulsoryContinuousSlots":2,
+            "weeklyFrequency":2
+        }
+    ]
+}

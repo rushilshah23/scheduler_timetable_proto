@@ -1,0 +1,492 @@
+{
+    "MONDAY": [
+        {
+            "id": 1,
+            "start_time": "09:00",
+            "end_time": "09:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 2,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 3,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 4,
+            "start_time": "10:30",
+            "end_time": "11:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 5,
+            "start_time": "11:00",
+            "end_time": "11:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 6,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 7,
+            "start_time": "12:00",
+            "end_time": "12:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 8,
+            "start_time": "12:30",
+            "end_time": "13:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 9,
+            "start_time": "13:00",
+            "end_time": "13:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 10,
+            "start_time": "13:30",
+            "end_time": "14:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 11,
+            "start_time": "14:00",
+            "end_time": "14:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 12,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 13,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 14,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 15,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 16,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "slot_alloted_to": null
+        }
+    ],
+    "TUESDAY": [
+        {
+            "id": 1,
+            "start_time": "09:00",
+            "end_time": "09:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 2,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 3,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 4,
+            "start_time": "10:30",
+            "end_time": "11:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 5,
+            "start_time": "11:00",
+            "end_time": "11:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 6,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 7,
+            "start_time": "12:00",
+            "end_time": "12:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 8,
+            "start_time": "12:30",
+            "end_time": "13:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 9,
+            "start_time": "13:00",
+            "end_time": "13:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 10,
+            "start_time": "13:30",
+            "end_time": "14:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 11,
+            "start_time": "14:00",
+            "end_time": "14:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 12,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 13,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 14,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 15,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 16,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "slot_alloted_to": null
+        }
+    ],
+    "WEDNESDAY": [
+        {
+            "id": 1,
+            "start_time": "09:00",
+            "end_time": "09:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 2,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 3,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 4,
+            "start_time": "10:30",
+            "end_time": "11:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 5,
+            "start_time": "11:00",
+            "end_time": "11:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 6,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 7,
+            "start_time": "12:00",
+            "end_time": "12:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 8,
+            "start_time": "12:30",
+            "end_time": "13:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 9,
+            "start_time": "13:00",
+            "end_time": "13:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 10,
+            "start_time": "13:30",
+            "end_time": "14:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 11,
+            "start_time": "14:00",
+            "end_time": "14:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 12,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 13,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 14,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 15,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 16,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "slot_alloted_to": null
+        }
+    ],
+    "THURSDAY": [
+        {
+            "id": 1,
+            "start_time": "09:00",
+            "end_time": "09:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 2,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 3,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 4,
+            "start_time": "10:30",
+            "end_time": "11:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 5,
+            "start_time": "11:00",
+            "end_time": "11:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 6,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 7,
+            "start_time": "12:00",
+            "end_time": "12:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 8,
+            "start_time": "12:30",
+            "end_time": "13:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 9,
+            "start_time": "13:00",
+            "end_time": "13:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 10,
+            "start_time": "13:30",
+            "end_time": "14:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 11,
+            "start_time": "14:00",
+            "end_time": "14:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 12,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 13,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 14,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 15,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 16,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "slot_alloted_to": null
+        }
+    ],
+    "FRIDAY": [
+        {
+            "id": 1,
+            "start_time": "09:00",
+            "end_time": "09:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 2,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 3,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 4,
+            "start_time": "10:30",
+            "end_time": "11:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 5,
+            "start_time": "11:00",
+            "end_time": "11:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 6,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 7,
+            "start_time": "12:00",
+            "end_time": "12:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 8,
+            "start_time": "12:30",
+            "end_time": "13:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 9,
+            "start_time": "13:00",
+            "end_time": "13:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 10,
+            "start_time": "13:30",
+            "end_time": "14:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 11,
+            "start_time": "14:00",
+            "end_time": "14:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 12,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 13,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 14,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 15,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "slot_alloted_to": null
+        },
+        {
+            "id": 16,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "slot_alloted_to": null
+        }
+    ]
+}
