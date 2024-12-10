@@ -3,6 +3,8 @@ from typing import List, Optional
 from datetime import time
 from enum import Enum
 from abc import  ABC, abstractmethod
+from src.genetic_algorithm import Gene, Chromosome
+
 
 class DayEnum(Enum):
     MONDAY="MONDAY"
@@ -52,7 +54,7 @@ class WorkingDay:
         }
 
 @dataclass
-class Slot():
+class Slot(Gene):
     id: str
     start_time: time
     end_time: time
@@ -63,15 +65,7 @@ class Slot():
     weekly_slot_number:int
     slot_alloted_to: "SlotAllotable" = None
 
-    constraints:List['Constraint'] = None
-    
-    def __post_init__(self):
-        if self.constraints is None:
-            self.constraints:List['Constraint'] = []
 
-
-    def allot_to(self, slot_allotable:"SlotAllotable"):
-        self.slot_alloted_to = slot_allotable
 
     def to_dict(self):
         return {
@@ -292,16 +286,14 @@ class Timetable:
         }
     
 @dataclass
-class UniversityTimetables:
-    timetables: List[Timetable]=None
-    constraints:List['Constraint'] = None
+class UniversityTimetables(Chromosome):
+    genes:List[Slot] = None
 
     def __post_init__(self):
 
-        if self.timetables is None:
-            self.timetables:List['Timetable'] = []
-        if self.constraints is None:
-            self.constraints:List['Constraint'] = []
+        if self.genes is None:
+            self.genes:List['Slot'] = []
+ 
 
             
     # def apply_constraints(self):
@@ -311,7 +303,7 @@ class UniversityTimetables:
 
     def to_dict(self):
         return {
-            "timetables": [timetable.to_dict() for timetable in self.timetables] if self.timetables else []
+            "timetables": [timetable.to_dict() for timetable in self.genes] if self.genes else []
             # "constraints": [constraint.to_dict() for constraint in self.constraints] if self.constraints else []
         }
 

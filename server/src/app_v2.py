@@ -1,16 +1,14 @@
-from typing import List, Dict, Tuple
+from typing import List, Dict
 from datetime import datetime, time, timedelta, timezone
 from collections import defaultdict
 
 import uuid
 
 # from src.domain import Slot,WorkingDay,SlotAllotable, Lecture
-from  src.domain3 import *
+from  src.domain2 import *
 from src.domain_utils import DomainUtils
 
-# from src.constraints import NoLectureAtBreak
 
-import random
 
 
 
@@ -192,51 +190,8 @@ def assign_lectures_to_slots(working_days: List[WorkingDay], lectures: List[Slot
     return time_table
 
 
-
-def select_random_slot(slots:List[Slot], allotables:List[SlotAllotable | None]) -> Slot:
-    random_slot_num = random.randint(0, len(slots)-1)
-    random_allotable_num = random.randint(0, len(allotables)-1)
-
-    if allotables[random_allotable_num] is not None:
-        if allotables[random_allotable_num].fixed_slot is True:
-            if not ( slots[random_slot_num].start_time != allotables[random_allotable_num].start_time and slots[random_slot_num].end_time != allotables[random_allotable_num].end_time):
-                slots[random_slot_num].slot_alloted_to = allotables[random_allotable_num]
-    return slots[random_slot_num]
-            
-
     
-# def allot_allotables_to_slots(slots:List[Slot]=None, lectures:List[FacultySubjectDivision]=None, breaks:List[Break]=None):
-#     if slots is None:
-#         slots = []
-#     if lectures is None:
-#         lectures = []
-#     if breaks is None:
-#         breaks = []
-
-#     slots_len = len(slots)
-#     lectures.extend(breaks)
-#     lec_len = len(lectures)
-
-#     blaclist_slots= []
-#     blacklist_lec = []
-
-#     while len(blacklist_lec) < lec_len:
-
-#         # print("here 1")
-#         rand_allotable_num  = random.randint(0,lec_len-1)
-#         rand_slots_num  = random.randint(0,slots_len-1)
-
-
-#         if rand_allotable_num not in blacklist_lec and rand_slots_num not in blaclist_slots:
-#             slots[rand_slots_num].slot_alloted_to = generate_slot_gene(slots=slots, allotables=lectures,random_slot_num=rand_slots_num, random_allotable_num=rand_allotable_num)
-#             blacklist_lec.append(rand_allotable_num)
-#             blaclist_slots.append(rand_slots_num)
-#             # slot_alloted = True
-
-
-#     return slots
-
-
+import random
 def allot_allotables_to_slots(slots:List[Slot]=None, lectures:List[FacultySubjectDivision]=None, breaks:List[Break]=None):
     if slots is None:
         slots = []
@@ -247,15 +202,40 @@ def allot_allotables_to_slots(slots:List[Slot]=None, lectures:List[FacultySubjec
 
     slots_len = len(slots)
     lectures.extend(breaks)
+    lec_len = len(lectures)
 
-    while len(lectures) < slots_len:
-        lectures.append(None)
+    blaclist_slots= []
+    blacklist_lec = []
 
-    slot = select_random_slot(slots,lectures)
+
+    # for lec in lectures:
+    #     for slot in slots:
+    #         if lec.faculty_id is None: #That means it is a break
+    #             weekly_slots_range = Utils.find_slots_for_a_time_range(slot.working_day, lec.)
+
+        # for slot in slots:
+        # if slot.slot_alloted_to is None:
+            
+        # slot_alloted =False
+        # while slot_alloted is not True  and len(blaclist_num) < lec_len:
+    while len(blacklist_lec) < lec_len:
+
+        # print("here 1")
+        rand_allotable_num  = random.randint(0,lec_len-1)
+        rand_slots_num  = random.randint(0,slots_len-1)
+
+
+        if rand_allotable_num not in blacklist_lec and rand_slots_num not in blaclist_slots:
+            slots[rand_slots_num].slot_alloted_to = lectures[rand_allotable_num]
+            blacklist_lec.append(rand_allotable_num)
+            blaclist_slots.append(rand_slots_num)
             # slot_alloted = True
 
 
-    return slot
+    return slots
+
+
+
 
 
 
@@ -494,116 +474,59 @@ def find_continuos_slot_count(start_time, end_time, slot_duration)->int:
     num_slots = int(total_duration_seconds // slot_duration)
     return num_slots
 
-
-
-
-
-
-def generate_university_timetables_chromosome(data:Dict)-> Tuple[UniversityTimetables, List[SlotAllotable]]:
+def create_university_timetables(data:Dict):
     domain_utils = DomainUtils(data)
 
     university_timetables:UniversityTimetables = UniversityTimetables()
     all_university_slots :List[Slot] = []
     divisions = domain_utils.get_all_divisions()
-    allotables_for_div:List[SlotAllotable] = []
 
-    all_university_slots = []
-    for division in divisions:
-        allotables_for_div = [
-            lec 
-            for lec in domain_utils.get_faculty_subject_division_list() 
-            if division.id == lec.division_id 
-            for _ in range(lec.continuos_slot)  # Duplicate based on continous_slot
-        ]            
-        div_weekly_breaks = []
-        for brk in domain_utils.get_all_breaks():
-            if brk.division_id == division.id:
-                # Generate multiple slots for breaks
-                generated_breaks = generate_slot_objects(
-                    obj=brk,
-                    start_time=brk.start_time,
-                    end_time=brk.end_time,
-                    slot_duration=brk.working_day.slot_duration
-                )
-                div_weekly_breaks.extend(generated_breaks)
-        
-        allotables_for_div.extend(div_weekly_breaks)
-
-
-        working_days_for_div = [working_day for working_day in domain_utils.get_all_working_days() if division.id == working_day.division_id]
-        div_weekly_empty_slots = Utils.create_weekly_slots_table(working_days_for_div)
-        
-
-        div_alloted_slots = allot_allotables_to_slots(div_weekly_empty_slots, allotables_for_div, div_weekly_breaks)
-        all_university_slots.extend(div_alloted_slots)
-        # timetable:Timetable = Timetable(division, div_alloted_slots)
-        # university_timetables.timetables.append(timetable)
+    tryAttempt = 0
+    total_weightage = 100
+    while total_weightage >= 1.0:
+        tryAttempt+=1
+        print(f"Attempt no - {tryAttempt}")
+        total_weightage = 0
+        all_university_slots = []
+        for division in divisions:
+            allotables_for_div = [
+                lec 
+                for lec in domain_utils.get_faculty_subject_division_list() 
+                if division.id == lec.division_id 
+                for _ in range(lec.continuos_slot)  # Duplicate based on continous_slot
+            ]            
+            div_weekly_breaks = []
+            for brk in domain_utils.get_all_breaks():
+                if brk.division_id == division.id:
+                    # Generate multiple slots for breaks
+                    generated_breaks = generate_slot_objects(
+                        obj=brk,
+                        start_time=brk.start_time,
+                        end_time=brk.end_time,
+                        slot_duration=brk.working_day.slot_duration
+                    )
+                    div_weekly_breaks.extend(generated_breaks)
+            
+            allotables_for_div.extend(div_weekly_breaks)
 
 
+            working_days_for_div = [working_day for working_day in domain_utils.get_all_working_days() if division.id == working_day.division_id]
+            div_weekly_empty_slots = Utils.create_weekly_slots_table(working_days_for_div)
+            
 
-    university_timetables.genes = all_university_slots
-    return university_timetables, allotables_for_div
-    
+            div_alloted_slots = allot_allotables_to_slots(div_weekly_empty_slots, allotables_for_div, div_weekly_breaks)
+            all_university_slots.extend(div_alloted_slots)
+            # timetable:Timetable = Timetable(division, div_alloted_slots)
+            # university_timetables.timetables.append(timetable)
 
+        from src.constraints import NoLectureAtBreak
+        constraints = [NoLectureAtBreak(1.0,all_university_slots )]
 
-
-
-
-
-
-
-
-#  Data options creation
-def get_total_slots_for_university(data):
-    domain_utils = DomainUtils(data)
-    
-    slot_count = 0
-    for working_day in domain_utils.get_all_working_days():
-        slot_count+=len(get_allotable_timings(working_day.start_time, working_day.end_time, working_day.slot_duration))
-    return slot_count
-
-        
-
-
-
-def generate_gene(data):
-    domain_utils = DomainUtils(data)
-
-
-    divisions = domain_utils.get_all_divisions()
-    allotables_for_div:List[SlotAllotable] = []
-
-    random_division_number = random.randint(0, len(divisions)-1)
-    division = divisions[random_division_number]
-    allotables_for_div = [
-        lec 
-        for lec in domain_utils.get_faculty_subject_division_list() 
-        if division.id == lec.division_id 
-        for _ in range(lec.continuos_slot)  # Duplicate based on continous_slot
-    ]            
-    div_weekly_breaks = []
-    for brk in domain_utils.get_all_breaks():
-        if brk.division_id == division.id:
-            # Generate multiple slots for breaks
-            generated_breaks = generate_slot_objects(
-                obj=brk,
-                start_time=brk.start_time,
-                end_time=brk.end_time,
-                slot_duration=brk.working_day.slot_duration
-            )
-            div_weekly_breaks.extend(generated_breaks)
-    
-    allotables_for_div.extend(div_weekly_breaks)
-
-
-    working_days_for_div = [working_day for working_day in domain_utils.get_all_working_days() if division.id == working_day.division_id]
-    div_weekly_empty_slots = Utils.create_weekly_slots_table(working_days_for_div)
-    
-
-    div_alloted_slot = allot_allotables_to_slots(div_weekly_empty_slots, allotables_for_div, div_weekly_breaks)
-
-    return div_alloted_slot
-
-
+        for constarint in constraints:
+            constraint_weight = constarint.apply()
+            print(f"Attempt -{tryAttempt} - constaint weight -{constraint_weight}")
+            total_weightage+=constraint_weight
+        # total_weightage =0
+    return all_university_slots
     
 
